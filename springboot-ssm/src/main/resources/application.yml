@@ -1,0 +1,24 @@
+server:  
+    port: 8081
+spring:
+    datasource:
+        driverClass: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/springboot?characterEncoding=utf8
+        username: kmeboa
+        password: kmeboa
+    freemarker:
+        template-loader-path: classpath:/templates
+    mvc:
+        static-path-pattern: /static/**
+
+# MyBatis  
+mybatis:  
+    typeAliasesPackage: com.github.wangsongyan.mvc.model.entity  
+    mapperLocations: classpath:/com/github/wangsongyan/mvc/model/dao/*.xml  
+    configLocation:
+    
+project-env:
+    contextPath: 
+    env: develope
+    smsurl: http://baidu.com
+    baiduAk: aJhasjd8asxua9sjdasdmsmka
