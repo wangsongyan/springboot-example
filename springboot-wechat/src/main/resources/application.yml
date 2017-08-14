@@ -1,0 +1,14 @@
+server:
+      port: 8090
+      tomcat:
+           max-threads: 800
+           uri-encoding: UTF-8
+           basedir: /opt/dev/springboot-tomcat-tmp
+           access-log-enabled: true
+logging:
+      path: /opt/dev/springboot-tomcat-tmp
+      file: wechat.log
+tuling123:
+      apikey: 
+wechat:
+      token: 
