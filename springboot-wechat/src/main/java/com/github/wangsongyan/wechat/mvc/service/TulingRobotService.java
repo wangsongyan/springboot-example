@@ -29,7 +29,7 @@ public class TulingRobotService {
 		try{
 			question = URLEncoder.encode(question, "utf-8");
 			URL getUrl = new URL(String.format(REQUEST_URL, apikey, question, userId));
-			System.out.println(getUrl.toString());
+			//System.out.println(getUrl.toString());
 			HttpURLConnection connection = (HttpURLConnection) getUrl.openConnection();
 			connection.connect();
 	
