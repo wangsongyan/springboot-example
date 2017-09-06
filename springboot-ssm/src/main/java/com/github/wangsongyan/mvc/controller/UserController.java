@@ -3,6 +3,8 @@
  */
 package com.github.wangsongyan.mvc.controller;
 
+import java.util.Date;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -41,6 +43,14 @@ public class UserController {
 	@ResponseBody
 	public Object getRolesByUserId(@PathVariable String userId){
 		return userService.getRolesByUserId(userId);
+	}
+	
+	@RequestMapping("/converter")
+	@ResponseBody
+	public Object convert(User user,Date birth){
+		System.out.println(user.getName());
+		System.out.println(birth);
+		return null;
 	}
 	
 }

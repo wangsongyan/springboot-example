@@ -3,7 +3,11 @@
  */
 package com.github.wangsongyan.config;
 
+import net.kmeb.oa.mvc.service.CustomDateConverter;
+import net.kmeb.oa.mvc.service.CustomTrimConvert;
+
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -17,6 +21,13 @@ import com.github.wangsongyan.interceptor.MyInterceptor1;
 public class MyWebAppConfigurer extends WebMvcConfigurerAdapter{
 
     @Override
+	public void addFormatters(FormatterRegistry registry) {
+		registry.addConverter(new CustomTrimConvert());
+		registry.addConverter(new CustomDateConverter());
+		super.addFormatters(registry);
+	}
+
+	@Override
     public void addInterceptors(InterceptorRegistry registry) {
         // 多个拦截器组成一个拦截器链
         // addPathPatterns 用于添加拦截规则

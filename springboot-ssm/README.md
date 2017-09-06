@@ -10,5 +10,5 @@
 
 ### TODO
 - [ ] mybatis多数据源配置
-- [ ] springmvc自定义converter配置
+- [x] springmvc自定义converter配置
 - [ ] quartz/springtask配置
