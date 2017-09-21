@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.wangsongyan</groupId>
+  <artifactId>springboot-gitee-wechat</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- 支持1.4.0.RELEASE及以上 -->
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.6.RELEASE</version>
+</parent>
+
+<dependencies>
+    <!-- fastbootWeixin的核心依赖 -->
+    <dependency>
+        <groupId>com.mxixm</groupId>
+        <artifactId>fastboot-weixin</artifactId>
+        <version>0.1.2.beta</version>
+    </dependency>
+
+    <!-- SpringBoot的web项目，必须 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!-- 暂时只能使用apache的http，后续可加入其它http支持 -->
+    <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpcore</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+    </dependency>
+</dependencies>
+  
+</project>
